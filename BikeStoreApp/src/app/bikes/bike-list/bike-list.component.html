@@ -1,0 +1,19 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor = "let bike of bikeService.bikesList">
+    <a class="btn" (click)="showForEdit(bike)">
+
+    <td>{{bike.BikeRef}}</td>
+    <td>{{bike.BikeBrand}}</td>    
+    <td>{{bike.BikeModel}}</td>
+    <td>{{bike.BikeColor}}</td>
+  </a>
+    <td>
+      
+        <!-- <i class="fa fa-pencil-square-o"></i> -->
+      
+      <a class="btn text-danger" (click)="onDelete(bike.BikeID)">
+        <i class="fa fa-trash-o" style="font-size:21px"></i>
+      </a>
+    </td>
+  </tr>
+</table>

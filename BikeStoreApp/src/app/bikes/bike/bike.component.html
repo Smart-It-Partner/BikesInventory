@@ -1,0 +1,49 @@
+<form class="bike-form" #bikeForm = "ngForm" (ngSubmit) = "onSubmit(bikeForm)">
+  <input type="hidden" name="BikeID" #BikeID="ngModel" [(ngModel)]="bikeService.selectedBike.BikeID">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="BikeRef" #BikeRef="ngModel" [(ngModel)]="bikeService.selectedBike.BikeRef" placeholder="Ref" required>
+      <div class="validation-error" *ngIf = "BikeRef.invalid && BikeRef.touched">This Field is required !</div>
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="BikeBrand" #BikeBrand="ngModel" [(ngModel)]="bikeService.selectedBike.BikeBrand" placeholder="Brand" required>
+      <div class="validation-error" *ngIf = "BikeBrand.invalid && BikeBrand.touched">This Field is required !</div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="BikeModel" #BikeModel="ngModel" [(ngModel)]="bikeService.selectedBike.BikeModel" placeholder="Model" required>
+      <div class="validation-error" *ngIf = "BikeModel.invalid && BikeModel.touched">This Field is required !</div>
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="BikeColor" #BikeColor="ngModel" [(ngModel)]="bikeService.selectedBike.BikeColor" placeholder="Color">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="BikeType" #BikeType="ngModel" [(ngModel)]="bikeService.selectedBike.BikeType" placeholder="Type">
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="BikeRating" #BikeRating="ngModel" [(ngModel)]="bikeService.selectedBike.BikeRating" placeholder="Rating">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input class="form-control" name="BikePrice" #BikePrice="ngModel" [(ngModel)]="bikeService.selectedBike.BikePrice" placeholder="Price">
+    </div>
+    <div class="form-group col-md-6">
+      <input class="form-control" name="BikeQty" #BikeQty="ngModel" [(ngModel)]="bikeService.selectedBike.BikeQty" placeholder="Quantity">
+    </div>
+  </div>
+  <div class="form-group">
+    <input class="form-control" name="BikeDesc" #BikeDesc="ngModel" [(ngModel)]="bikeService.selectedBike.BikeDesc" placeholder="Description">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-8">
+      <button [disabled]="!bikeForm.valid" type="submit" class="btn btn-lg btn-block btn-info"><i class="fa fa-floppy-o"></i> Submit</button>
+    </div>
+    <div class="form-group col-md-4">
+      <button type="button" class="btn btn-lg btn-block btn-secondary" (click) = "resetForm(bikeForm)"><i class="fa fa-repeat"></i> Reset</button>
+    </div>
+  </div>
+</form>
