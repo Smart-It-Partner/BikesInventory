@@ -2,11 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
-ng serve ## Clone the repository (VS Code recommended)
+## Clone the repository (VS Code recommended)
 
 link : https://github.com/Smart-It-Partner/BikesInventory.git
 
-# Run 'npm install'
+## Run 'npm install'
 
 In order to resolve dependencies for your packages.
 
