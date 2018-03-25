@@ -1,5 +1,5 @@
 # BikesInventory
 
-## Run WebAPIBike (asp.net back-end)
+## 1 - Run WebAPIBike (asp.net back-end)
 
-## Run BikeStoreApp (Angular front-end)
+## 2- Run BikeStoreApp (Angular front-end)
