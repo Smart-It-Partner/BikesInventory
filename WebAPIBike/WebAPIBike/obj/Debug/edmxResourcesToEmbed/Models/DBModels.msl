@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebAPIBikeDBModelStoreContainer" CdmEntityContainer="DBModel">
+    <EntitySetMapping Name="Bikes">
+      <EntityTypeMapping TypeName="WebAPIBikeDBModel.Bikes">
+        <MappingFragment StoreEntitySet="Bikes">
+          <ScalarProperty Name="BikeID" ColumnName="BikeID" />
+          <ScalarProperty Name="BikeRef" ColumnName="BikeRef" />
+          <ScalarProperty Name="BikeBrand" ColumnName="BikeBrand" />
+          <ScalarProperty Name="BikeModel" ColumnName="BikeModel" />
+          <ScalarProperty Name="BikeColor" ColumnName="BikeColor" />
+          <ScalarProperty Name="BikeType" ColumnName="BikeType" />
+          <ScalarProperty Name="BikeRating" ColumnName="BikeRating" />
+          <ScalarProperty Name="BikePrice" ColumnName="BikePrice" />
+          <ScalarProperty Name="BikeQty" ColumnName="BikeQty" />
+          <ScalarProperty Name="BikeDesc" ColumnName="BikeDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

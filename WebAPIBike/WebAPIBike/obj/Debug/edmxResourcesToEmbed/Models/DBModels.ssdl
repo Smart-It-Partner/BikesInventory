@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WebAPIBikeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bikes">
+    <Key>
+      <PropertyRef Name="BikeID" />
+    </Key>
+    <Property Name="BikeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BikeRef" Type="varchar" MaxLength="20" />
+    <Property Name="BikeBrand" Type="varchar" MaxLength="50" />
+    <Property Name="BikeModel" Type="varchar" MaxLength="50" />
+    <Property Name="BikeColor" Type="varchar" MaxLength="50" />
+    <Property Name="BikeType" Type="varchar" MaxLength="50" />
+    <Property Name="BikeRating" Type="int" />
+    <Property Name="BikePrice" Type="numeric" Precision="18" Scale="6" />
+    <Property Name="BikeQty" Type="int" />
+    <Property Name="BikeDesc" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="WebAPIBikeDBModelStoreContainer">
+    <EntitySet Name="Bikes" EntityType="Self.Bikes" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

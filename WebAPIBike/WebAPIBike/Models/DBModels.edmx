@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WebAPIBikeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bikes">
+          <Key>
+            <PropertyRef Name="BikeID" />
+          </Key>
+          <Property Name="BikeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BikeRef" Type="varchar" MaxLength="20" />
+          <Property Name="BikeBrand" Type="varchar" MaxLength="50" />
+          <Property Name="BikeModel" Type="varchar" MaxLength="50" />
+          <Property Name="BikeColor" Type="varchar" MaxLength="50" />
+          <Property Name="BikeType" Type="varchar" MaxLength="50" />
+          <Property Name="BikeRating" Type="int" />
+          <Property Name="BikePrice" Type="numeric" Precision="18" Scale="6" />
+          <Property Name="BikeQty" Type="int" />
+          <Property Name="BikeDesc" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="WebAPIBikeDBModelStoreContainer">
+          <EntitySet Name="Bikes" EntityType="Self.Bikes" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WebAPIBikeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bikes">
+          <Key>
+            <PropertyRef Name="BikeID" />
+          </Key>
+          <Property Name="BikeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BikeRef" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BikeBrand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BikeModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BikeColor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BikeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BikeRating" Type="Int32" />
+          <Property Name="BikePrice" Type="Decimal" Precision="18" Scale="6" />
+          <Property Name="BikeQty" Type="Int32" />
+          <Property Name="BikeDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DBModel" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bikes" EntityType="Self.Bikes" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WebAPIBikeDBModelStoreContainer" CdmEntityContainer="DBModel">
+          <EntitySetMapping Name="Bikes">
+            <EntityTypeMapping TypeName="WebAPIBikeDBModel.Bikes">
+              <MappingFragment StoreEntitySet="Bikes">
+                <ScalarProperty Name="BikeID" ColumnName="BikeID" />
+                <ScalarProperty Name="BikeRef" ColumnName="BikeRef" />
+                <ScalarProperty Name="BikeBrand" ColumnName="BikeBrand" />
+                <ScalarProperty Name="BikeModel" ColumnName="BikeModel" />
+                <ScalarProperty Name="BikeColor" ColumnName="BikeColor" />
+                <ScalarProperty Name="BikeType" ColumnName="BikeType" />
+                <ScalarProperty Name="BikeRating" ColumnName="BikeRating" />
+                <ScalarProperty Name="BikePrice" ColumnName="BikePrice" />
+                <ScalarProperty Name="BikeQty" ColumnName="BikeQty" />
+                <ScalarProperty Name="BikeDesc" ColumnName="BikeDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
